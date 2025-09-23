@@ -141,15 +141,15 @@ const OptiKids = () => {
             avec douceur et professionnalisme.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            {/* <a 
               href="tel:+33000000000"
               className="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg"
             >
               Appeler OptiKids
-            </a>
-            <button className="bg-transparent text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white hover:text-orange-600 transition-all duration-200">
+            </a> */}
+            {/* <button className="bg-transparent text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white hover:text-orange-600 transition-all duration-200">
               Prendre RDV en ligne
-            </button>
+            </button> */}
           </div>
         </div>
       </section>

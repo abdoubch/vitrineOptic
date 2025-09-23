@@ -203,12 +203,12 @@ const Choufa = () => {
             pour prendre soin de votre vision.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            {/* <a 
               href="tel:+33000000000"
               className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transform hover:scale-105 transition-all duration-200 shadow-lg"
             >
               Appeler Maintenant
-            </a>
+            </a> */}
             <button className="bg-white text-green-600 px-8 py-4 rounded-full font-semibold text-lg border-2 border-green-200 hover:border-green-300 hover:bg-green-50 transition-all duration-200">
               Venir au Centre
             </button>

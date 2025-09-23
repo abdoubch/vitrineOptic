@@ -231,12 +231,12 @@ const Ophtalmologie = () => {
             avec des soins personnalisés et de qualité.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            {/* <a 
               href="tel:+33000000000"
               className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg"
             >
               Prendre Rendez-vous
-            </a>
+            </a> */}
             <button className="bg-transparent text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-200">
               Urgence Oculaire
             </button>

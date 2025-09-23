@@ -239,9 +239,9 @@ const Contactologie = () => {
             <button className="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg">
               Essai Gratuit
             </button>
-            <button className="bg-transparent text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white hover:text-indigo-600 transition-all duration-200">
+            {/* <button className="bg-transparent text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white hover:text-indigo-600 transition-all duration-200">
               Prendre Rendez-vous
-            </button>
+            </button> */}
           </div>
           <p className="text-sm text-indigo-100 mt-4">
             Première adaptation • Suivi inclus • Garantie satisfaction

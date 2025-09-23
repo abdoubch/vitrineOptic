@@ -28,7 +28,7 @@ const Audioprothese = () => {
   const technologies = [
     {
       name: 'Bluetooth',
-      image: 'https://images.pexels.com/photos/8088505/pexels-photo-8088505.jpeg',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyr_BLdgZryOMsOJS0zVazYWc7zCmsKM5oyA&s',
       description: 'Connexion directe avec smartphones et appareils'
     },
     {
@@ -72,7 +72,7 @@ const Audioprothese = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
             <img 
-              src="https://images.pexels.com/photos/8088505/pexels-photo-8088505.jpeg" 
+              src="https://seniorglobe.com/wp-content/uploads/2023/07/consulter-un-audioprothesiste-img-01.jpg" 
               alt="Consultation audioprothèse"
               className="w-full h-96 object-cover"
             />
@@ -250,17 +250,17 @@ const Audioprothese = () => {
             Nos experts audioprothésistes vous accompagnent pour retrouver une audition claire 
             et profiter pleinement de tous les sons de la vie.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg">
               Bilan Auditif Gratuit
             </button>
             <button className="bg-transparent text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white hover:text-purple-600 transition-all duration-200">
               Essai Sans Engagement
             </button>
-          </div>
-          <p className="text-sm text-purple-100 mt-4">
+          </div> */}
+          {/* <p className="text-sm text-purple-100 mt-4">
             Prise en charge Sécurité Sociale • Aide financière possible • Garantie satisfaction
-          </p>
+          </p> */}
         </div>
       </section>
     </div>

@@ -173,12 +173,12 @@ const Senior = () => {
             dans le choix des meilleures solutions visuelles.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            {/* <a 
               href="tel:+33000000000"
               className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-emerald-600 hover:to-teal-600 transform hover:scale-105 transition-all duration-200 shadow-lg"
             >
               Nous Contacter
-            </a>
+            </a> */}
             <button className="bg-white text-emerald-600 px-8 py-4 rounded-full font-semibold text-lg border-2 border-emerald-200 hover:border-emerald-300 hover:bg-emerald-50 transition-all duration-200">
               Demander un Devis
             </button>

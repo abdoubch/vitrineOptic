@@ -56,7 +56,7 @@ const Home = () => {
       title: 'Audioprothèse',
       subtitle: 'Santé Auditive',
       description: 'Solutions auditives modernes avec suivi personnalisé.',
-      image: 'https://images.pexels.com/photos/8088505/pexels-photo-8088505.jpeg',
+      image: 'https://seniorglobe.com/wp-content/uploads/2023/07/consulter-un-audioprothesiste-img-01.jpg',
       link: '/audioprothese',
       color: 'from-purple-400 to-pink-500'
     }
@@ -85,12 +85,12 @@ const Home = () => {
               >
                 Conseil Gratuit "Choufa"
               </Link>
-              <Link 
-                to="/ophtalmologie"
-                className="bg-white text-gray-700 px-8 py-4 rounded-full font-semibold text-lg border-2 border-gray-200 hover:border-sky-300 hover:text-sky-600 transition-all duration-200"
+              {/* <Link 
+              to="/ophtalmologie"
+              className="bg-white text-gray-700 px-8 py-4 rounded-full font-semibold text-lg border-2 border-gray-200 hover:border-sky-300 hover:text-sky-600 transition-all duration-200"
               >
                 Prendre Rendez-vous
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -180,12 +180,12 @@ const Home = () => {
             >
               Conseil Gratuit
             </Link>
-            <a 
+            {/* <a 
               href="tel:+33000000000"
               className="bg-transparent text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white hover:text-sky-600 transition-all duration-200"
             >
               Nous Appeler
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
