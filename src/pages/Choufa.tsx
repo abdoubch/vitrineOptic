@@ -20,8 +20,8 @@ const Choufa = () => {
     },
     {
       icon: Gift,
-      title: 'Service 100% Gratuit',
-      description: 'Tous nos conseils et notre expertise sont offerts gratuitement, sans aucun engagement de votre part.'
+      title: 'Service Personnalisé',
+      description: 'Tous nos conseils et notre expertise sont adaptés à vos besoins spécifiques, avec un accompagnement personnalisé.'
     }
   ];
 
@@ -40,13 +40,13 @@ const Choufa = () => {
                 "Choufa"
               </span>
             </h1>
-            <p className="text-2xl text-green-600 font-medium mb-6">Conseil Visuel Gratuit</p>
+            <p className="text-2xl text-green-600 font-medium mb-6">Conseil Visuel Personnalisé</p>
             <div className="inline-flex items-center bg-green-100 text-green-800 px-6 py-3 rounded-full font-semibold mb-8">
               <Gift className="w-5 h-5 mr-2" />
-              SERVICE 100% GRATUIT
+              SERVICE PERSONNALISÉ
             </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Un espace de conseil et d'accompagnement entièrement gratuit où nos experts vous guident 
+              Un espace de conseil et d'accompagnement personnalisé où nos experts vous guident 
               dans vos choix de santé visuelle, sans aucune obligation d'achat.
             </p>
           </div>
@@ -59,14 +59,14 @@ const Choufa = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
             <img 
               src="https://images.pexels.com/photos/3952220/pexels-photo-3952220.jpeg" 
-              alt="Conseil visuel gratuit"
+              alt="Conseil visuel personnalisé"
               className="w-full h-96 object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20"></div>
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center text-white">
                 <h3 className="text-3xl font-bold mb-2">Conseils d'Experts</h3>
-                <p className="text-lg opacity-90">Entièrement gratuits, sans engagement</p>
+                <p className="text-lg opacity-90">Entièrement personnalisés, adaptés à vos besoins</p>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ const Choufa = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nos Services Gratuits</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nos Services Personnalisés</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Profitez de l'expertise de nos professionnels pour prendre soin de votre vision, 
               sans aucun frais ni engagement.
@@ -111,7 +111,7 @@ const Choufa = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { step: '1', title: 'Prise de Contact', desc: 'Appelez-nous ou venez directement au centre' },
-              { step: '2', title: 'Évaluation Gratuite', desc: 'Discussion avec nos experts sur vos besoins' },
+              { step: '2', title: 'Évaluation Personnalisée', desc: 'Discussion avec nos experts sur vos besoins' },
               { step: '3', title: 'Conseils Personnalisés', desc: 'Recommandations adaptées à votre situation' }
             ].map((step, index) => (
               <div key={index} className="text-center">
@@ -169,7 +169,7 @@ const Choufa = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Ils Nous Font Confiance</h2>
             <p className="text-xl text-green-100 max-w-2xl mx-auto">
-              Des milliers de personnes ont déjà bénéficié de nos conseils gratuits.
+              Des milliers de personnes ont déjà bénéficié de nos conseils personnalisés.
             </p>
           </div>
           
@@ -178,7 +178,7 @@ const Choufa = () => {
               { icon: Users, number: '5000+', label: 'Personnes conseillées' },
               { icon: Star, number: '98%', label: 'Satisfaction client' },
               { icon: Clock, number: '30min', label: 'Durée moyenne conseil' },
-              { icon: Gift, number: '100%', label: 'Gratuit' }
+              { icon: Gift, number: '100%', label: 'Personnalisé' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -196,7 +196,7 @@ const Choufa = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Profitez de Nos Conseils Gratuits
+            Profitez de Nos Conseils Personnalisés
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Aucune obligation d'achat, aucun frais caché. Juste des conseils d'experts 
@@ -214,7 +214,7 @@ const Choufa = () => {
             </button>
           </div>
           <p className="text-sm text-gray-500 mt-4">
-            Service gratuit • Sans engagement • Conseil personnalisé
+            Service personnalisé • Accompagnement dédié • Conseil sur mesure
           </p>
         </div>
       </section>

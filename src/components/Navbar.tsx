@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Eye, Stethoscope } from 'lucide-react';
+import { Menu, X, Eye } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,6 +15,8 @@ const Navbar = () => {
     { name: 'Ophtalmologie', href: '/ophtalmologie' },
     { name: 'Contactologie', href: '/contactologie' },
     { name: 'Audioprothèse', href: '/audioprothese' },
+    { name: 'Professionnel & Sportif', href: '/professionnel-sportif' },
+    { name: 'Interactif & Optitech', href: '/interactif-optitech' },
   ];
 
   return (
@@ -30,7 +32,7 @@ const Navbar = () => {
               <h1 className="text-2xl font-bold bg-gradient-to-r from-sky-600 to-emerald-600 bg-clip-text text-transparent">
                 CENTRE OCOA
               </h1>
-              <p className="text-xs text-gray-600 font-medium">Santé Visuelle & Auditive</p>
+              {/* <p className="text-xs text-gray-600 font-medium">Santé Visuelle & Auditive</p> */}
             </div>
           </Link>
 

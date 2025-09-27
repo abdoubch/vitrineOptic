@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Eye, Heart, Users, Shield, Award, ArrowRight } from 'lucide-react';
+import { Eye, Heart, Users, Shield, ArrowRight } from 'lucide-react';
 
 const Home = () => {
   const services = [
@@ -30,7 +29,7 @@ const Home = () => {
     },
     {
       title: 'Conseil "Choufa"',
-      subtitle: 'Service Gratuit',
+      subtitle: 'Conseil Personnalisé',
       description: 'Conseils personnalisés et orientation par nos experts.',
       image: 'https://images.pexels.com/photos/3952220/pexels-photo-3952220.jpeg',
       link: '/choufa',
@@ -59,6 +58,22 @@ const Home = () => {
       image: 'https://seniorglobe.com/wp-content/uploads/2023/07/consulter-un-audioprothesiste-img-01.jpg',
       link: '/audioprothese',
       color: 'from-purple-400 to-pink-500'
+    },
+    {
+      title: 'Professionnel & Sportif',
+      subtitle: 'Performance & Protection',
+      description: 'Solutions optiques spécialisées pour professionnels et sportifs avec équipements de protection.',
+      image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg',
+      link: '/professionnel-sportif',
+      color: 'from-orange-400 to-red-500'
+    },
+    {
+      title: 'Interactif & Optitech',
+      subtitle: 'Innovation & Technologie',
+      description: 'Technologies avancées, réalité augmentée et applications mobiles pour une expérience moderne.',
+      image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg',
+      link: '/interactif-optitech',
+      color: 'from-purple-400 to-indigo-500'
     }
   ];
 
@@ -76,14 +91,14 @@ const Home = () => {
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
               Votre centre de référence en santé visuelle et auditive. 
-              Une prise en charge complète pour toute la famille avec nos 7 pôles spécialisés.
+              Une prise en charge complète pour toute la famille avec nos 9 pôles spécialisés.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/choufa"
                 className="bg-gradient-to-r from-sky-500 to-emerald-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-sky-600 hover:to-emerald-600 transform hover:scale-105 transition-all duration-200 shadow-lg"
               >
-                Conseil Gratuit "Choufa"
+                Conseil "Choufa"
               </Link>
               {/* <Link 
               to="/ophtalmologie"
@@ -108,7 +123,7 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Eye, title: 'Expertise', desc: '7 pôles spécialisés pour une prise en charge complète' },
+              { icon: Eye, title: 'Expertise', desc: '9 pôles spécialisés pour une prise en charge complète' },
               { icon: Heart, title: 'Bienveillance', desc: 'Une approche humaine et personnalisée pour chaque patient' },
               { icon: Users, title: 'Tous Âges', desc: 'Des solutions adaptées de l\'enfance au grand âge' },
               { icon: Shield, title: 'Qualité', desc: 'Équipements de pointe et professionnels qualifiés' }
@@ -131,7 +146,7 @@ const Home = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Nos Services Spécialisés</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Découvrez nos 7 pôles d'expertise pour répondre à tous vos besoins en santé visuelle et auditive.
+              Découvrez nos 9 pôles d'expertise pour répondre à tous vos besoins en santé visuelle et auditive.
             </p>
           </div>
 
@@ -178,7 +193,7 @@ const Home = () => {
               to="/choufa"
               className="bg-white text-sky-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg"
             >
-              Conseil Gratuit
+              Conseil Personnalisé
             </Link>
             {/* <a 
               href="tel:+33000000000"

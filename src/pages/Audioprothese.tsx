@@ -186,7 +186,7 @@ const Audioprothese = () => {
                   'Suivi personnalisé et bienveillant',
                   'Garanties étendues et service après-vente',
                   'Prise en charge administrative simplifiée',
-                  'Essai gratuit sans engagement',
+                  'Essai personnalisé sans engagement',
                   'Réparations et maintenance sur site'
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center space-x-4">
@@ -252,7 +252,7 @@ const Audioprothese = () => {
           </p>
           {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg">
-              Bilan Auditif Gratuit
+              Bilan Auditif Personnalisé
             </button>
             <button className="bg-transparent text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white hover:text-purple-600 transition-all duration-200">
               Essai Sans Engagement
