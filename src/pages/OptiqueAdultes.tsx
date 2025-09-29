@@ -1,6 +1,8 @@
 import { Glasses, Sparkles, Sun, Wrench, CheckCircle, Users } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const OptiqueAdultes = () => {
+  const { t } = useLanguage();
   const services = [
     {
       icon: Glasses,
@@ -52,19 +54,18 @@ const OptiqueAdultes = () => {
       <section className="pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-sky-500 to-emerald-500 rounded-full mb-8">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#AF9866] to-[#286D45] rounded-full mb-8">
               <Users className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Pôle{' '}
+              {t('adult.title.pole')}{' '}
               <span className="bg-gradient-to-r from-sky-600 to-emerald-600 bg-clip-text text-transparent">
-                Optique Adultes
+                {t('adult.title.name')}
               </span>
             </h1>
-            <p className="text-2xl text-sky-600 font-medium mb-6">Solutions Complètes</p>
+            <p className="text-2xl text-sky-600 font-medium mb-6">{t('adult.subtitle')}</p>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Un service complet pour les besoins visuels des hommes et des femmes, 
-              alliant esthétique, précision technique et confort au quotidien.
+              {t('adult.hero.desc')}
             </p>
           </div>
         </div>
@@ -73,7 +74,7 @@ const OptiqueAdultes = () => {
       {/* Collections Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Nos Collections</h2>
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">{t('adult.collections.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {collections.map((collection, index) => (
               <div key={index} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
@@ -97,10 +98,8 @@ const OptiqueAdultes = () => {
       <section className="py-20 bg-white/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nos Services Spécialisés</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Une expertise technique de pointe pour répondre à tous vos besoins visuels avec élégance et précision.
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('adult.services.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('adult.services.desc')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -108,7 +107,7 @@ const OptiqueAdultes = () => {
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 border border-sky-100">
                 <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-emerald-500 rounded-full flex items-center justify-center mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#AF9866] to-[#286D45] rounded-full flex items-center justify-center mb-4">
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                   </div>
@@ -140,24 +139,24 @@ const OptiqueAdultes = () => {
                 alt="Consultation optique adulte"
                 className="rounded-2xl shadow-2xl w-full"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-sky-500 to-emerald-500 text-white p-6 rounded-2xl shadow-xl">
+              <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-[#AF9866] to-[#286D45] text-white p-6 rounded-2xl shadow-xl">
                 <p className="text-2xl font-bold">25+</p>
                 <p className="text-sm">Années d'Expertise</p>
               </div>
             </div>
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-8">Excellence & Savoir-faire</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">{t('adult.excellence.title')}</h2>
               <div className="space-y-6">
                 {[
-                  'Conseil personnalisé selon votre style de vie',
-                  'Technologies de pointe pour verres sur-mesure',
-                  'Large gamme de marques reconnues',
-                  'Ajustements précis et confort optimal',
-                  'Garantie satisfaction et suivi régulier',
-                  'Réparations et maintenance professionnelles'
+                  t('adult.excellence.f1'),
+                  t('adult.excellence.f2'),
+                  t('adult.excellence.f3'),
+                  t('adult.excellence.f4'),
+                  t('adult.excellence.f5'),
+                  t('adult.excellence.f6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center space-x-4">
-                    <CheckCircle className="w-6 h-6 text-emerald-500 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-[#286D45] flex-shrink-0" />
                     <span className="text-lg text-gray-700">{feature}</span>
                   </div>
                 ))}
@@ -171,20 +170,18 @@ const OptiqueAdultes = () => {
       <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Technologies Avancées</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Équipements de dernière génération pour des solutions visuelles de haute précision.
-            </p>
+            <h2 className="text-4xl font-bold mb-4">{t('adult.tech.title')}</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">{t('adult.tech.desc')}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: 'Verres Progressifs', desc: 'Dernière génération pour un confort visuel optimal' },
-              { title: 'Traitement Anti-reflets', desc: 'Technologies avancées pour une vision pure' },
-              { title: 'Verres Photochromiques', desc: 'Adaptation automatique à la luminosité' }
+              { title: t('adult.tech.t1'), desc: t('adult.tech.t1d') },
+              { title: t('adult.tech.t2'), desc: t('adult.tech.t2d') },
+              { title: t('adult.tech.t3'), desc: t('adult.tech.t3d') }
             ].map((tech, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#AF9866] to-[#286D45] rounded-full flex items-center justify-center mx-auto mb-6">
                   <Sparkles className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{tech.title}</h3>
@@ -198,13 +195,8 @@ const OptiqueAdultes = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-sky-600 to-emerald-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Découvrez Notre Expertise Optique
-          </h2>
-          <p className="text-xl text-sky-100 mb-8 max-w-2xl mx-auto">
-            Nos conseillers experts vous accompagnent pour trouver la solution visuelle parfaite, 
-            alliant style, confort et performance.
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">{t('adult.cta.title')}</h2>
+          <p className="text-xl text-sky-100 mb-8 max-w-2xl mx-auto">{t('adult.cta.desc')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             {/* <button className="bg-white text-sky-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg">
               Prendre Rendez-vous

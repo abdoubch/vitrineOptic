@@ -1,7 +1,9 @@
 import React from 'react';
 import { Volume2, Ear, Settings, Heart, CheckCircle, Award, Users, Shield } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Audioprothese = () => {
+  const { t } = useLanguage();
   const services = [
     {
       icon: Ear,
@@ -53,15 +55,14 @@ const Audioprothese = () => {
               <Volume2 className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Pôle{' '}
+              {t('audio.title.pole')}{' '}
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Audioprothèse
+                {t('audio.title.name')}
               </span>
             </h1>
-            <p className="text-2xl text-purple-600 font-medium mb-6">Santé Auditive</p>
+            <p className="text-2xl text-purple-600 font-medium mb-6">{t('audio.subtitle')}</p>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Un accompagnement auditif moderne et personnalisé avec les dernières technologies. 
-              Retrouvez le plaisir d'entendre avec des solutions sur-mesure et discrètes.
+              {t('audio.hero.desc')}
             </p>
           </div>
         </div>
@@ -91,10 +92,8 @@ const Audioprothese = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nos Services Auditifs</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Un accompagnement complet de l'évaluation à l'adaptation pour retrouver une audition optimale.
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('audio.services.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('audio.services.desc')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -115,10 +114,8 @@ const Audioprothese = () => {
       <section className="py-20 bg-white/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Technologies Avancées</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Découvrez les dernières innovations en audioprothèse pour un confort d'écoute exceptionnel.
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('audio.tech.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('audio.tech.desc')}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -146,19 +143,17 @@ const Audioprothese = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Processus d'Appareillage</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Un accompagnement étape par étape pour une solution auditive parfaitement adaptée.
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('audio.process.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('audio.process.desc')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             {[
-              { step: '1', title: 'Bilan', desc: 'Évaluation auditive complète' },
-              { step: '2', title: 'Conseils', desc: 'Recommandations personnalisées' },
-              { step: '3', title: 'Essai', desc: 'Test des appareils sélectionnés' },
-              { step: '4', title: 'Réglages', desc: 'Ajustements précis et formation' },
-              { step: '5', title: 'Suivi', desc: 'Contrôles et maintenance réguliers' }
+              { step: '1', title: t('audio.process.1'), desc: t('audio.process.1d') },
+              { step: '2', title: t('audio.process.2'), desc: t('audio.process.2d') },
+              { step: '3', title: t('audio.process.3'), desc: t('audio.process.3d') },
+              { step: '4', title: t('audio.process.4'), desc: t('audio.process.4d') },
+              { step: '5', title: t('audio.process.5'), desc: t('audio.process.5d') }
             ].map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
@@ -177,7 +172,7 @@ const Audioprothese = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-8">Notre Expertise</h2>
+              <h2 className="text-4xl font-bold mb-8">{t('audio.expertise.title')}</h2>
               <div className="space-y-6">
                 {[
                   'Audioprothésistes diplômés d\'État',
@@ -215,18 +210,16 @@ const Audioprothese = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Avantages de Nos Solutions</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Retrouvez une qualité de vie optimale avec nos appareils auditifs dernière génération.
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('audio.benefits.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('audio.cta.desc')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Shield, title: 'Discrétion', desc: 'Appareils quasi invisibles' },
-              { icon: Award, title: 'Performance', desc: 'Qualité sonore exceptionnelle' },
-              { icon: Users, title: 'Confort', desc: 'Port agréable toute la journée' },
-              { icon: Settings, title: 'Connectivité', desc: 'Compatible tous appareils' }
+              { icon: Shield, title: t('audio.benefit.1'), desc: t('audio.benefit.1d') },
+              { icon: Award, title: t('audio.benefit.2'), desc: t('audio.benefit.2d') },
+              { icon: Users, title: t('audio.benefit.3'), desc: t('audio.benefit.3d') },
+              { icon: Settings, title: t('audio.benefit.4'), desc: t('audio.benefit.4d') }
             ].map((benefit, index) => (
               <div key={index} className="text-center bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -243,13 +236,8 @@ const Audioprothese = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Retrouvez le Plaisir d'Entendre
-          </h2>
-          <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Nos experts audioprothésistes vous accompagnent pour retrouver une audition claire 
-            et profiter pleinement de tous les sons de la vie.
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">{t('audio.cta.title')}</h2>
+          <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">{t('audio.cta.desc')}</p>
           {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg">
               Bilan Auditif Personnalisé

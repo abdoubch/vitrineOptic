@@ -1,6 +1,8 @@
 import { Heart, Shield, Smile, Star, CheckCircle, Baby } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const OptiKids = () => {
+  const { t } = useLanguage();
   const services = [
   {
     icon: Shield,
@@ -38,16 +40,13 @@ const OptiKids = () => {
               <Baby className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Pôle{' '}
+              {t('optikids.title.pole')}{' '}
               <span className="bg-gradient-to-r from-orange-500 to-pink-600 bg-clip-text text-transparent">
-                OptiKids
+                {t('optikids.title.name')}
               </span>
             </h1>
-            <p className="text-2xl text-orange-600 font-medium mb-6">Vision de l'Enfant</p>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Un espace coloré et chaleureux pensé spécialement pour nos jeunes patients. 
-              Nous accompagnons les enfants dans leur développement visuel avec douceur et professionnalisme.
-            </p>
+            <p className="text-2xl text-orange-600 font-medium mb-6">{t('optikids.subtitle')}</p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">{t('optikids.hero.desc')}</p>
           </div>
         </div>
       </section>
@@ -64,8 +63,8 @@ const OptiKids = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 to-pink-600/20"></div>
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center text-white">
-                <h3 className="text-3xl font-bold mb-2">Un Environnement Adapté</h3>
-                <p className="text-lg opacity-90">Confort, sécurité et bienveillance pour vos enfants</p>
+                <h3 className="text-3xl font-bold mb-2">{t('optikids.overlay.title')}</h3>
+                <p className="text-lg opacity-90">{t('optikids.overlay.desc')}</p>
               </div>
             </div>
           </div>
@@ -76,10 +75,8 @@ const OptiKids = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nos Services OptiKids</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Des solutions spécialement adaptées aux besoins visuels des enfants, dans un cadre rassurant et ludique.
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('optikids.services.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('optikids.services.desc')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -111,18 +108,18 @@ const OptiKids = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-8">Pourquoi Choisir OptiKids ?</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">{t('optikids.features.title')}</h2>
               <div className="space-y-6">
                 {[
-                  'Équipe spécialisée dans la vision infantile',
-                  'Environnement ludique et rassurant',
-                  'Matériel adapté aux enfants',
-                  'Prise en charge bienveillante',
-                  'Gamme complète d\'équipements enfants',
-                  'Suivi personnalisé de la croissance visuelle'
+                  t('optikids.feature.1'),
+                  t('optikids.feature.2'),
+                  t('optikids.feature.3'),
+                  t('optikids.feature.4'),
+                  t('optikids.feature.5'),
+                  t('optikids.feature.6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center space-x-4">
-                    <CheckCircle className="w-6 h-6 text-emerald-500 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-[#286D45] flex-shrink-0" />
                     <span className="text-lg text-gray-700">{feature}</span>
                   </div>
                 ))}
@@ -146,13 +143,8 @@ const OptiKids = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-500 to-pink-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Prenez Rendez-vous pour Votre Enfant
-          </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-            Notre équipe OptiKids est là pour accompagner votre enfant dans sa découverte du monde de la vision, 
-            avec douceur et professionnalisme.
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">{t('optikids.cta.title')}</h2>
+          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">{t('optikids.cta.desc')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             {/* <a 
               href="tel:+33000000000"

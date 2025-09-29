@@ -1,22 +1,26 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Eye } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logo from '../assets/logo.svg';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
+  const { t, toggleLang } = useLanguage();
+
   const navigation = [
-    { name: 'Accueil', href: '/' },
-    { name: 'OptiKids', href: '/optikids' },
-    { name: 'Optique Adultes', href: '/optique-adultes' },
-    { name: 'Sénior & Besoins Spéciaux', href: '/senior' },
-    { name: 'Conseil "Choufa"', href: '/choufa' },
-    { name: 'Ophtalmologie', href: '/ophtalmologie' },
-    { name: 'Contactologie', href: '/contactologie' },
-    { name: 'Audioprothèse', href: '/audioprothese' },
-    { name: 'Professionnel & Sportif', href: '/professionnel-sportif' },
-    { name: 'Interactif & Optitech', href: '/interactif-optitech' },
+    { name: t('nav.home'), href: '/' },
+    { name: t('nav.optikids'), href: '/optikids' },
+    { name: t('nav.adult'), href: '/optique-adultes' },
+    { name: t('nav.senior'), href: '/senior' },
+    { name: t('nav.choufa'), href: '/choufa' },
+    { name: t('nav.ophtalmo'), href: '/ophtalmologie' },
+    { name: t('nav.contactologie'), href: '/contactologie' },
+    { name: t('nav.audio'), href: '/audioprothese' },
+    { name: t('nav.pro'), href: '/professionnel-sportif' },
+    { name: t('nav.tech'), href: '/interactif-optitech' },
   ];
 
   return (
@@ -24,16 +28,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-sky-400 to-emerald-500 rounded-full flex items-center justify-center">
-              <Eye className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-sky-600 to-emerald-600 bg-clip-text text-transparent">
-                CENTRE OCOA
-              </h1>
-              {/* <p className="text-xs text-gray-600 font-medium">Santé Visuelle & Auditive</p> */}
-            </div>
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="Centre OCOA" className="h-24 w-auto pr-8" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -44,13 +40,19 @@ const Navbar = () => {
                 to={item.href}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   location.pathname === item.href
-                    ? 'bg-gradient-to-r from-sky-400 to-emerald-500 text-white shadow-md'
+                    ? 'bg-gradient-to-r from-[#AF9866] to-[#286D45] text-white shadow-md'
                     : 'text-gray-700 hover:text-sky-600 hover:bg-sky-50'
                 }`}
               >
                 {item.name}
               </Link>
             ))}
+            <button
+              onClick={toggleLang}
+              className="ml-4 px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 border border-gray-200 hover:bg-gray-50"
+            >
+              {t('lang.toggle')}
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -75,13 +77,19 @@ const Navbar = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
                     location.pathname === item.href
-                      ? 'bg-gradient-to-r from-sky-400 to-emerald-500 text-white'
+                      ? 'bg-gradient-to-r from-[#AF9866] to-[#286D45] text-white'
                       : 'text-gray-700 hover:text-sky-600 hover:bg-sky-50'
                   }`}
                 >
                   {item.name}
                 </Link>
               ))}
+              <button
+                onClick={() => { toggleLang(); setIsMenuOpen(false); }}
+                className="block w-full mt-2 px-4 py-3 rounded-lg text-sm font-semibold text-gray-700 border border-gray-200 hover:bg-gray-50 text-left"
+              >
+                {t('lang.toggle')}
+              </button>
             </div>
           </div>
         )}

@@ -1,45 +1,51 @@
 import React from 'react';
 import { Circle, Eye, Baby, Droplets, UserCheck, CheckCircle, Star, Calendar } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Contactologie = () => {
+  const { t } = useLanguage();
   const services = [
     {
       icon: Circle,
-      title: 'Lentilles Courantes',
-      description: 'Large gamme de lentilles journalières et mensuelles pour tous les types de corrections visuelles.'
+      title: t('contacto.svc.1.title'),
+      description: t('contacto.svc.1.desc'),
+      image: 'https://images.pexels.com/photos/5843445/pexels-photo-5843445.jpeg'
     },
     {
       icon: Eye,
-      title: 'Lentilles Sur Prescription',
-      description: 'Lentilles spécialisées sur prescription médicale pour corrections spécifiques et pathologies.'
+      title: t('contacto.svc.2.title'),
+      description: t('contacto.svc.2.desc'),
+      image: 'https://images.pexels.com/photos/5843337/pexels-photo-5843337.jpeg'
     },
     {
       icon: Baby,
-      title: 'Lentilles Enfants',
-      description: 'Solutions adaptées aux enfants avec accompagnement personnalisé pour un port optimal et sécurisé.'
+      title: t('contacto.svc.3.title'),
+      description: t('contacto.svc.3.desc'),
+      image: 'https://images.pexels.com/photos/5843354/pexels-photo-5843354.jpeg'
     },
     {
       icon: UserCheck,
-      title: 'Adaptation & Suivi',
-      description: 'Adaptation personnalisée avec suivi régulier pour garantir confort, santé oculaire et satisfaction.'
+      title: t('contacto.svc.4.title'),
+      description: t('contacto.svc.4.desc'),
+      image: 'https://images.pexels.com/photos/5843417/pexels-photo-5843417.jpeg'
     }
   ];
 
   const lensTypes = [
     {
-      type: 'Journalières',
-      image: 'https://images.pexels.com/photos/13816069/pexels-photo-13816069.jpeg',
-      benefits: ['Hygiène optimale', 'Confort quotidien', 'Pas d\'entretien']
+      type: t('contacto.type.daily'),
+      image: 'https://images.pexels.com/photos/5843428/pexels-photo-5843428.jpeg',
+      benefits: [t('contacto.benefit.1'), t('contacto.benefit.2'), t('contacto.benefit.3')]
     },
     {
-      type: 'Mensuelles',
-      image: 'https://images.pexels.com/photos/5752287/pexels-photo-5752287.jpeg',
-      benefits: ['Économiques', 'Haute qualité', 'Personnalisables']
+      type: t('contacto.type.monthly'),
+      image: 'https://images.pexels.com/photos/5843337/pexels-photo-5843337.jpeg',
+      benefits: [t('contacto.benefit.4'), t('contacto.benefit.5'), t('contacto.benefit.6')]
     },
     {
-      type: 'Spécialisées',
-      image: 'https://images.pexels.com/photos/3952220/pexels-photo-3952220.jpeg',
-      benefits: ['Sur mesure', 'Corrections complexes', 'Suivi médical']
+      type: t('contacto.type.special'),
+      image: 'https://images.pexels.com/photos/5843363/pexels-photo-5843363.jpeg',
+      benefits: [t('contacto.benefit.7'), t('contacto.benefit.8'), t('contacto.benefit.9')]
     }
   ];
 
@@ -53,16 +59,13 @@ const Contactologie = () => {
               <Circle className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Pôle{' '}
+              {t('contacto.title.pole')}{' '}
               <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Contactologie
+                {t('contacto.title.name')}
               </span>
             </h1>
-            <p className="text-2xl text-indigo-600 font-medium mb-6">Expertise Lentilles</p>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Une expertise spécialisée pour l'adaptation et le suivi des lentilles de contact. 
-              Solutions personnalisées pour tous les âges avec un accompagnement professionnel.
-            </p>
+            <p className="text-2xl text-indigo-600 font-medium mb-6">{t('contacto.subtitle')}</p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">{t('contacto.hero.desc')}</p>
           </div>
         </div>
       </section>
@@ -71,10 +74,8 @@ const Contactologie = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Types de Lentilles</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Découvrez notre gamme complète adaptée à tous vos besoins visuels.
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('contacto.types.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('contacto.types.desc')}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -93,7 +94,7 @@ const Contactologie = () => {
                   <ul className="space-y-2">
                     {lens.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-[#286D45] flex-shrink-0" />
                         <span className="text-gray-600">{benefit}</span>
                       </li>
                     ))}
@@ -109,20 +110,29 @@ const Contactologie = () => {
       <section className="py-20 bg-white/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nos Services Contactologie</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Un accompagnement complet de l'adaptation au suivi pour une expérience optimale des lentilles.
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('contacto.services.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('contacto.services.desc')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 border border-indigo-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 border border-indigo-100">
+                <div className="flex flex-col md:flex-row">
+                  <div className="md:w-1/2">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-48 md:h-full object-cover"
+                    />
+                  </div>
+                  <div className="md:w-1/2 p-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mb-6">
+                      <service.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                    <p className="text-gray-600 leading-relaxed text-lg">{service.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-lg">{service.description}</p>
               </div>
             ))}
           </div>
@@ -133,18 +143,16 @@ const Contactologie = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Processus d'Adaptation</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Un accompagnement étape par étape pour une adaptation réussie et durable.
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('contacto.process.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('contacto.process.desc')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: '1', title: 'Bilan Initial', desc: 'Examen complet et évaluation des besoins' },
-              { step: '2', title: 'Essai & Tests', desc: 'Test de différents types de lentilles' },
-              { step: '3', title: 'Formation', desc: 'Apprentissage manipulation et entretien' },
-              { step: '4', title: 'Suivi', desc: 'Contrôles réguliers et ajustements' }
+              { step: '1', title: t('contacto.process.1.title'), desc: t('contacto.process.1.desc') },
+              { step: '2', title: t('contacto.process.2.title'), desc: t('contacto.process.2.desc') },
+              { step: '3', title: t('contacto.process.3.title'), desc: t('contacto.process.3.desc') },
+              { step: '4', title: t('contacto.process.4.title'), desc: t('contacto.process.4.desc') }
             ].map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
@@ -182,7 +190,7 @@ const Contactologie = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/3952220/pexels-photo-3952220.jpeg" 
+                src="https://images.pexels.com/photos/5843417/pexels-photo-5843417.jpeg" 
                 alt="Produits d'entretien lentilles"
                 className="rounded-2xl shadow-2xl w-full"
               />
@@ -199,27 +207,25 @@ const Contactologie = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Vitrine Dédiée</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Espace d'exposition spécialement conçu pour découvrir notre gamme complète.
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('contacto.showcase.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('contacto.showcase.desc')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8">
               <Star className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Exposition Interactive</h3>
-              <p className="text-gray-600">Découvrez et testez nos produits</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t('contacto.show.1.title')}</h3>
+              <p className="text-gray-600">{t('contacto.show.1.desc')}</p>
             </div>
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8">
               <Calendar className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Démonstrations</h3>
-              <p className="text-gray-600">Sessions d'information régulières</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t('contacto.show.2.title')}</h3>
+              <p className="text-gray-600">{t('contacto.show.2.desc')}</p>
             </div>
             <div className="bg-gradient-to-br from-pink-50 to-indigo-50 rounded-2xl p-8">
               <UserCheck className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Conseil Expert</h3>
-              <p className="text-gray-600">Accompagnement personnalisé</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t('contacto.show.3.title')}</h3>
+              <p className="text-gray-600">{t('contacto.show.3.desc')}</p>
             </div>
           </div>
         </div>
@@ -228,24 +234,19 @@ const Contactologie = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Découvrez la Liberté des Lentilles
-          </h2>
-          <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
-            Nos experts contactologues vous accompagnent pour trouver la solution parfaite 
-            et vivre pleinement votre quotidien sans contrainte.
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">{t('contacto.cta.title')}</h2>
+          <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">{t('contacto.cta.desc')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg">
+            {/* <button className="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg">
               Essai Personnalisé
-            </button>
+            </button> */}
             {/* <button className="bg-transparent text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white hover:text-indigo-600 transition-all duration-200">
               Prendre Rendez-vous
             </button> */}
           </div>
-          <p className="text-sm text-indigo-100 mt-4">
+          {/* <p className="text-sm text-indigo-100 mt-4">
             Première adaptation • Suivi inclus • Garantie satisfaction
-          </p>
+          </p> */}
         </div>
       </section>
     </div>

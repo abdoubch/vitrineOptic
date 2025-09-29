@@ -1,7 +1,9 @@
 import React from 'react';
 import { Target, Shield, Zap, Trophy, CheckCircle, Users, Activity, Award } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const ProfessionnelSportif = () => {
+  const { t } = useLanguage();
   const services = [
     {
       icon: Target,
@@ -44,12 +46,12 @@ const ProfessionnelSportif = () => {
   ];
 
   const certifications = [
-    'Certification CE pour équipements de protection',
-    'Normes EN 166 et EN 170',
-    'Verres de sécurité classe S',
-    'Traitements anti-buée et anti-rayures',
-    'Protection UV 400nm garantie',
-    'Résistance aux chocs et aux projections'
+    t('sport.cert.1'),
+    t('sport.cert.2'),
+    t('sport.cert.3'),
+    t('sport.cert.4'),
+    t('sport.cert.5'),
+    t('sport.cert.6')
   ];
 
   return (
@@ -62,15 +64,14 @@ const ProfessionnelSportif = () => {
               <Trophy className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Pôle{' '}
+              {t('sport.title.pole')}{' '}
               <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-                Professionnel & Sportif
+                {t('sport.title.name')}
               </span>
             </h1>
-            <p className="text-2xl text-orange-600 font-medium mb-6">Performance & Protection</p>
+            <p className="text-2xl text-orange-600 font-medium mb-6">{t('sport.subtitle')}</p>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Solutions optiques spécialisées pour les professionnels et les sportifs. 
-              Protection, performance et confort pour tous vos défis quotidiens.
+              {t('sport.hero.desc')}
             </p>
           </div>
         </div>
@@ -79,7 +80,7 @@ const ProfessionnelSportif = () => {
       {/* Spécialités Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Nos Spécialités</h2>
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">{t('sport.specialties.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {specialites.map((specialite, index) => (
               <div key={index} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
@@ -103,10 +104,8 @@ const ProfessionnelSportif = () => {
       <section className="py-20 bg-white/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nos Services Spécialisés</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Une expertise technique de pointe pour répondre aux exigences des professionnels et sportifs.
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('sport.services.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('sport.services.desc')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -139,7 +138,7 @@ const ProfessionnelSportif = () => {
               </div>
             </div>
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-8">Certifications & Normes</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">{t('sport.certs.title')}</h2>
               <div className="space-y-4">
                 {certifications.map((cert, index) => (
                   <div key={index} className="flex items-center space-x-4">
@@ -157,18 +156,16 @@ const ProfessionnelSportif = () => {
       <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Sports & Activités</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Solutions optiques adaptées à chaque discipline sportive pour des performances optimales.
-            </p>
+            <h2 className="text-4xl font-bold mb-4">{t('sport.activities.title')}</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">{t('sport.services.desc')}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { title: 'Cyclisme', desc: 'Lunettes aérodynamiques et verres polarisés' },
-              { title: 'Ski & Snowboard', desc: 'Protection UV et anti-buée pour la montagne' },
-              { title: 'Natation', desc: 'Lunettes de natation avec correction' },
-              { title: 'Course à Pied', desc: 'Montures légères et verres photochromiques' }
+              { title: t('sport.act.1'), desc: t('sport.act.1d') },
+              { title: t('sport.act.2'), desc: t('sport.act.2d') },
+              { title: t('sport.act.3'), desc: t('sport.act.3d') },
+              { title: t('sport.act.4'), desc: t('sport.act.4d') }
             ].map((sport, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -185,19 +182,11 @@ const ProfessionnelSportif = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Prêt à Optimiser Vos Performances ?
-          </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-            Nos experts vous conseillent pour trouver l'équipement optique parfait selon votre activité professionnelle ou sportive.
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6">{t('sport.cta.title')}</h2>
+          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">{t('sport.cta.desc')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg">
-              Consultation Spécialisée
-            </button>
-            <button className="bg-transparent text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white hover:text-orange-600 transition-all duration-200">
-              Voir Nos Solutions
-            </button>
+            <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg">{t('sport.cta.btn1')}</button>
+            <button className="bg-transparent text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white hover:text-orange-600 transition-all duration-200">{t('sport.cta.btn2')}</button>
           </div>
         </div>
       </section>

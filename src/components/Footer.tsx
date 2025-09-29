@@ -1,28 +1,25 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock, Eye } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import logo from '../assets/logo.svg';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo et Description */}
           <div>
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-sky-400 to-emerald-500 rounded-full flex items-center justify-center">
-                <Eye className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-xl font-bold">CENTRE OCOA</h3>
+            <div className="mb-4">
+              <img src={logo} alt="Centre OCOA" className="h-18 w-auto mb-4" />
             </div>
-            <p className="text-gray-300 leading-relaxed">
-              Votre centre spécialisé en santé visuelle et auditive. 
-              Une prise en charge complète pour tous les âges avec nos équipes d'experts.
-            </p>
+            <p className="text-gray-300 leading-relaxed">{t('footer.desc')}</p>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-sky-400">Contact</h4>
+            <h4 className="text-lg font-semibold mb-4 text-[#AF9866]">{t('footer.contact')}</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-emerald-400 flex-shrink-0" />
@@ -41,14 +38,14 @@ const Footer = () => {
 
           {/* Horaires */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-sky-400">Horaires</h4>
+            <h4 className="text-lg font-semibold mb-4 text-[#AF9866]">{t('footer.hours')}</h4>
             <div className="space-y-2">
               <div className="flex items-center space-x-3">
                 <Clock className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                 <div className="text-gray-300">
-                  <p>Lun - Ven : 9h - 18h</p>
-                  <p>Sam : 9h - 17h</p>
-                  <p>Dim : Fermé</p>
+                  <p>{t('footer.hours.week')}</p>
+                  <p>{t('footer.hours.sat')}</p>
+                  <p>{t('footer.hours.sun')}</p>
                 </div>
               </div>
             </div>
