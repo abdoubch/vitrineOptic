@@ -8,22 +8,26 @@ const ProfessionnelSportif = () => {
     {
       icon: Target,
       title: 'Lunettes de Protection',
-      description: 'Protection oculaire professionnelle certifiée pour tous les métiers à risque : industrie, construction, laboratoire, soudure.'
+      description: 'Protection oculaire professionnelle certifiée pour tous les métiers à risque : industrie, construction, laboratoire, soudure.',
+      image: 'https://images.pexels.com/photos/3807277/pexels-photo-3807277.jpeg'
     },
     {
       icon: Shield,
       title: 'Verres Sécurité',
-      description: 'Verres de sécurité renforcés, anti-buée, anti-rayures et anti-reflets pour un confort optimal au travail.'
+      description: 'Verres de sécurité renforcés, anti-buée, anti-rayures et anti-reflets pour un confort optimal au travail.',
+      image: 'https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg'
     },
     {
       icon: Activity,
       title: 'Lunettes Sportives',
-      description: 'Montures techniques et verres adaptés pour tous les sports : cyclisme, ski, natation, course, tennis.'
+      description: 'Montures techniques et verres adaptés pour tous les sports : cyclisme, ski, natation, course, tennis.',
+      image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg'
     },
     {
       icon: Zap,
       title: 'Technologies Avancées',
-      description: 'Verres photochromiques, polarisés, anti-UV et traitements spéciaux pour performances optimales.'
+      description: 'Verres photochromiques, polarisés, anti-UV et traitements spéciaux pour performances optimales.',
+      image: 'https://images.pexels.com/photos/8028456/pexels-photo-8028456.jpeg'
     }
   ];
 
@@ -110,12 +114,23 @@ const ProfessionnelSportif = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 border border-orange-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 border border-orange-100">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                  <div className="flex-1">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                      <service.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 md:mb-4">{service.title}</h3>
+                    <p className="text-gray-600 leading-relaxed text-lg">{service.description}</p>
+                  </div>
+                  {service.image && (
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full md:w-64 h-56 md:h-64 object-cover rounded-xl shadow-md"
+                    />
+                  )}
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-lg">{service.description}</p>
               </div>
             ))}
           </div>
@@ -184,10 +199,10 @@ const ProfessionnelSportif = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">{t('sport.cta.title')}</h2>
           <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">{t('sport.cta.desc')}</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg">{t('sport.cta.btn1')}</button>
             <button className="bg-transparent text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white hover:text-orange-600 transition-all duration-200">{t('sport.cta.btn2')}</button>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

@@ -8,25 +8,29 @@ const Audioprothese = () => {
     {
       icon: Ear,
       title: 'Bilan Auditif Complet',
-      description: 'Évaluation précise de votre audition et prise d\'empreinte pour un ajustement parfait de vos futurs appareils.'
+      description: 'Évaluation précise de votre audition et prise d\'empreinte pour un ajustement parfait de vos futurs appareils.',
+      image: 'https://images.pexels.com/photos/7578801/pexels-photo-7578801.jpeg'
     },
     {
       icon: Volume2,
       title: 'Appareils Dernière Génération',
-      description: 'Appareils auditifs modernes, discrets et performants avec les dernières innovations technologiques.'
+      description: 'Appareils auditifs modernes, discrets et performants avec les dernières innovations technologiques.',
+      image: 'https://images.pexels.com/photos/14682242/pexels-photo-14682242.jpeg'
     },
     {
       icon: Heart,
       title: 'Accessoires & Entretien',
-      description: 'Gamme complète d\'accessoires et produits d\'entretien pour optimiser le fonctionnement de vos appareils.'
+      description: 'Gamme complète d\'accessoires et produits d\'entretien pour optimiser le fonctionnement de vos appareils.',
+      image: 'https://images.pexels.com/photos/6857206/pexels-photo-6857206.jpeg'
     },
     {
       icon: Settings,
       title: 'Réglages & Suivi',
-      description: 'Ajustements réguliers et suivi personnalisé pour un confort auditif optimal au quotidien.'
+      description: 'Ajustements réguliers et suivi personnalisé pour un confort auditif optimal au quotidien.',
+      image: 'https://images.pexels.com/photos/8376221/pexels-photo-8376221.jpeg'
     }
   ];
-
+//https://images.pexels.com/photos/14682242/pexels-photo-14682242.jpeg
   const technologies = [
     {
       name: 'Bluetooth',
@@ -98,12 +102,23 @@ const Audioprothese = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 border border-purple-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 border border-purple-100">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                  <div className="flex-1">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                      <service.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 md:mb-4">{service.title}</h3>
+                    <p className="text-gray-600 leading-relaxed text-lg">{service.description}</p>
+                  </div>
+                  {service.image && (
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full md:w-64 h-56 md:h-64 object-cover rounded-xl shadow-md"
+                    />
+                  )}
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-lg">{service.description}</p>
               </div>
             ))}
           </div>
@@ -111,33 +126,7 @@ const Audioprothese = () => {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 bg-white/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('audio.tech.title')}</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t('audio.tech.desc')}</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
-              <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={tech.image} 
-                    alt={tech.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-purple-600/40 to-transparent"></div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{tech.name}</h3>
-                  <p className="text-gray-600">{tech.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Process Section */}
       <section className="py-20">
@@ -193,7 +182,7 @@ const Audioprothese = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg" 
+                src="https://images.pexels.com/photos/27867347/pexels-photo-27867347.jpeg" 
                 alt="Expert audioprothésiste"
                 className="rounded-2xl shadow-2xl w-full"
               />

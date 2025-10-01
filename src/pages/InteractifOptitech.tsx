@@ -7,22 +7,26 @@ const InteractifOptitech = () => {
     {
       icon: Smartphone,
       title: 'Applications Mobiles',
-      description: 'Apps interactives pour simulation de montures, tests visuels et suivi de votre santé oculaire en temps réel.'
+      description: 'Apps interactives pour simulation de montures, tests visuels et suivi de votre santé oculaire en temps réel.',
+      image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg'
     },
     {
       icon: Monitor,
       title: 'Réalité Augmentée',
-      description: 'Essayage virtuel de montures, simulation de verres et visualisation 3D de vos futures lunettes.'
+      description: 'Essayage virtuel de montures, simulation de verres et visualisation 3D de vos futures lunettes.',
+      image: 'https://images.pexels.com/photos/4145347/pexels-photo-4145347.jpeg'
     },
     {
       icon: Camera,
       title: 'Diagnostic Digital',
-      description: 'Technologies d\'imagerie avancées pour examens précis et détection précoce des troubles visuels.'
+      description: 'Technologies d\'imagerie avancées pour examens précis et détection précoce des troubles visuels.',
+      image: 'https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg'
     },
     {
       icon: Wifi,
       title: 'Connectivité IoT',
-      description: 'Lunettes connectées, suivi automatique de l\'usage et alertes personnalisées pour votre confort.'
+      description: 'Lunettes connectées, suivi automatique de l\'usage et alertes personnalisées pour votre confort.',
+      image: 'https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg'
     }
   ];
 
@@ -34,7 +38,7 @@ const InteractifOptitech = () => {
     },
     {
       name: 'Diagnostic IA',
-      image: 'https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg',
+      image: 'https://media.istockphoto.com/id/1515913422/fr/photo/un-analyste-de-donn%C3%A9es-utilisant-la-technologie-ai-pour-loutil-de-travail-pour-lanalyse-de.jpg?b=1&s=612x612&w=0&k=20&c=uqbtdfpUBvVV0q5RJi0n9uR3AYInnGKCSfI_OozFXNA=',
       description: 'Intelligence artificielle pour analyses précises'
     },
     {
@@ -132,12 +136,23 @@ const InteractifOptitech = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 border border-purple-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 border border-purple-100">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                  <div className="flex-1">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                      <service.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 md:mb-4">{service.title}</h3>
+                    <p className="text-gray-600 leading-relaxed text-lg">{service.description}</p>
+                  </div>
+                  {service.image && (
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full md:w-64 h-56 md:h-64 object-cover rounded-xl shadow-md"
+                    />
+                  )}
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-lg">{service.description}</p>
               </div>
             ))}
           </div>
@@ -248,12 +263,12 @@ const InteractifOptitech = () => {
           <h2 className="text-4xl font-bold text-white mb-6">{t('optitech.cta.title')}</h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">{t('optitech.cta.desc')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg">
+            {/* <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-200 shadow-lg">
               Télécharger nos Apps
             </button>
             <button className="bg-transparent text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white hover:text-purple-600 transition-all duration-200">
               Découvrir les Technologies
-            </button>
+            </button> */}
           </div>
         </div>
       </section>

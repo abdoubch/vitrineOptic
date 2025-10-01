@@ -10,7 +10,7 @@ const Home = () => {
       title: t('home.svc.optikids.title'),
       subtitle: t('home.svc.optikids.subtitle'),
       description: t('home.svc.optikids.desc'),
-      image: 'https://plus.unsplash.com/premium_photo-1661587216211-7d68c0864a05?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-DUOos_IgwfHhKXS7tk4hBwmeCx16-2KEDV8xWauB5VWmiETzG0LxDNR82roKeiuEuP0&usqp=CAU',
       link: '/optikids',
       color: 'from-orange-400 to-pink-500'
     },
@@ -18,7 +18,7 @@ const Home = () => {
       title: t('home.svc.adult.title'),
       subtitle: t('home.svc.adult.subtitle'),
       description: t('home.svc.adult.desc'),
-      image: 'https://images.pexels.com/photos/701877/pexels-photo-701877.jpeg',
+      image: 'https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=800&h=600&fit=crop&crop=center',
       link: '/optique-adultes',
       color: 'from-[#AF9866] to-[#286D45]'
     },
@@ -26,7 +26,7 @@ const Home = () => {
       title: t('home.svc.senior.title'),
       subtitle: t('home.svc.senior.subtitle'),
       description: t('home.svc.senior.desc'),
-      image: 'https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg',
+      image: 'https://images.pexels.com/photos/267642/pexels-photo-267642.jpeg',
       link: '/senior',
       color: 'from-[#286D45] to-teal-500'
     },
@@ -34,7 +34,7 @@ const Home = () => {
       title: t('home.svc.choufa.title'),
       subtitle: t('home.svc.choufa.subtitle'),
       description: t('home.svc.choufa.desc'),
-      image: 'https://images.pexels.com/photos/3952220/pexels-photo-3952220.jpeg',
+      image: 'https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg',
       link: '/choufa',
       color: 'from-green-400 to-blue-500'
     },
@@ -50,7 +50,7 @@ const Home = () => {
       title: t('home.svc.contactologie.title'),
       subtitle: t('home.svc.contactologie.subtitle'),
       description: t('home.svc.contactologie.desc'),
-      image: 'https://images.pexels.com/photos/13816069/pexels-photo-13816069.jpeg',
+      image: 'https://images.pexels.com/photos/5843337/pexels-photo-5843337.jpeg',
       link: '/contactologie',
       color: 'from-indigo-400 to-purple-500'
     },
@@ -58,7 +58,7 @@ const Home = () => {
       title: t('home.svc.audio.title'),
       subtitle: t('home.svc.audio.subtitle'),
       description: t('home.svc.audio.desc'),
-      image: 'https://seniorglobe.com/wp-content/uploads/2023/07/consulter-un-audioprothesiste-img-01.jpg',
+      image: 'https://images.pexels.com/photos/14682242/pexels-photo-14682242.jpeg',
       link: '/audioprothese',
       color: 'from-purple-400 to-pink-500'
     },
